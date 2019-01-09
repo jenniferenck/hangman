@@ -16,7 +16,7 @@ exports[`<Hangman /> matches snapshot 1`] = `
     _
     _
   </p>
-  <p>
+  <div>
     <button
       disabled={false}
       key="a"
@@ -225,6 +225,11 @@ exports[`<Hangman /> matches snapshot 1`] = `
     >
       z
     </button>
+  </div>
+  <p>
+    You guessed 
+    0
+     wrong
   </p>
 </div>
 `;
