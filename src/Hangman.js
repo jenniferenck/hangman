@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { randomWord } from './words';
 import './Hangman.css';
 import img0 from './0.jpg';
 import img1 from './1.jpg';
@@ -17,10 +18,16 @@ class Hangman extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { nWrong: 0, guessed: new Set(), answer: 'apple' };
+    this.state = { nWrong: 0, guessed: new Set(), answer: randomWord() };
     this.handleGuess = this.handleGuess.bind(this);
+    this.printrandomWord = this.printrandomWord.bind(this);
+    this.restartGame = this.restartGame.bind(this);
   }
 
+  printrandomWord() {
+    console.log(this.state.answer);
+    return this.state.answer;
+  }
   /** guessedWord: show current-state of word:
     if guessed letters are {a,p,e}, show "app_e" for "apple"
   */
@@ -54,12 +61,19 @@ class Hangman extends Component {
     });
   }
 
+  restartGame() {
+    // on click, set state of game back to original and get new random word
+    this.setState({ nWrong: 0, guessed: new Set(), answer: randomWord() });
+  }
+
   /** generateButtons: return array of letter buttons to render */
   generateButtons() {
     return 'abcdefghijklmnopqrstuvwxyz'.split('').map(ltr => (
       <button
+        className="keyboard"
         key={ltr}
         value={ltr}
+        u
         onClick={this.handleGuess}
         disabled={
           this.state.nWrong < this.props.maxWrong
@@ -79,11 +93,12 @@ class Hangman extends Component {
         <img src={this.props.images[this.state.nWrong]} />
         <p className="Hangman-word">{this.guessedWord()}</p>
         <div>{this.generateButtons()}</div>
-        {this.state.nWrong < this.props.maxWrong ? (
-          <p>GAME OVER SUCKER</p>
+        {this.state.nWrong === this.props.maxWrong ? (
+          <p>GAME OVER SUCKER the answer is {this.state.answer}</p>
         ) : (
           <p>You guessed {this.state.nWrong} wrong</p>
         )}
+        <button onClick={this.restartGame}>Restart</button>
       </div>
     );
   }

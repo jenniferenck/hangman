@@ -18,209 +18,261 @@ exports[`<Hangman /> matches snapshot 1`] = `
   </p>
   <div>
     <button
+      className="keyboard"
       disabled={false}
       key="a"
       onClick={[Function]}
+      u={true}
       value="a"
     >
       a
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="b"
       onClick={[Function]}
+      u={true}
       value="b"
     >
       b
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="c"
       onClick={[Function]}
+      u={true}
       value="c"
     >
       c
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="d"
       onClick={[Function]}
+      u={true}
       value="d"
     >
       d
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="e"
       onClick={[Function]}
+      u={true}
       value="e"
     >
       e
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="f"
       onClick={[Function]}
+      u={true}
       value="f"
     >
       f
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="g"
       onClick={[Function]}
+      u={true}
       value="g"
     >
       g
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="h"
       onClick={[Function]}
+      u={true}
       value="h"
     >
       h
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="i"
       onClick={[Function]}
+      u={true}
       value="i"
     >
       i
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="j"
       onClick={[Function]}
+      u={true}
       value="j"
     >
       j
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="k"
       onClick={[Function]}
+      u={true}
       value="k"
     >
       k
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="l"
       onClick={[Function]}
+      u={true}
       value="l"
     >
       l
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="m"
       onClick={[Function]}
+      u={true}
       value="m"
     >
       m
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="n"
       onClick={[Function]}
+      u={true}
       value="n"
     >
       n
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="o"
       onClick={[Function]}
+      u={true}
       value="o"
     >
       o
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="p"
       onClick={[Function]}
+      u={true}
       value="p"
     >
       p
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="q"
       onClick={[Function]}
+      u={true}
       value="q"
     >
       q
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="r"
       onClick={[Function]}
+      u={true}
       value="r"
     >
       r
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="s"
       onClick={[Function]}
+      u={true}
       value="s"
     >
       s
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="t"
       onClick={[Function]}
+      u={true}
       value="t"
     >
       t
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="u"
       onClick={[Function]}
+      u={true}
       value="u"
     >
       u
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="v"
       onClick={[Function]}
+      u={true}
       value="v"
     >
       v
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="w"
       onClick={[Function]}
+      u={true}
       value="w"
     >
       w
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="x"
       onClick={[Function]}
+      u={true}
       value="x"
     >
       x
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="y"
       onClick={[Function]}
+      u={true}
       value="y"
     >
       y
     </button>
     <button
+      className="keyboard"
       disabled={false}
       key="z"
       onClick={[Function]}
+      u={true}
       value="z"
     >
       z
@@ -231,5 +283,10 @@ exports[`<Hangman /> matches snapshot 1`] = `
     0
      wrong
   </p>
+  <button
+    onClick={[Function]}
+  >
+    Restart
+  </button>
 </div>
 `;

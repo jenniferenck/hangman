@@ -25,7 +25,9 @@ it('has a default STATES of nWrong and answer to start', function() {
   const wrapper = shallow(<Hangman />);
   // has two default states: images and maxWrong
   expect(wrapper.state().nWrong).toBe(0);
-  expect(wrapper.state().answer).toBe('apple');
+  // call the printanswer fuc
+  const answer = wrapper.state().answer;
+  expect(wrapper.state().answer).toBe(answer);
   expect(wrapper.state().guessed).toBeInstanceOf(Set);
 });
 
@@ -41,13 +43,13 @@ it('has a default PROPS of nWrong and answer to start', function() {
 it('generates a button for each letter', function() {
   const wrapper = shallow(<Hangman />);
 
-  const button = wrapper.find('button');
+  const button = wrapper.find('.keyboard');
   //   make sure 26 keys were generated
   expect(button).toHaveLength(26);
 });
 
 // test single button works
-it('test single button works', function() {
+it('test single disables after click', function() {
   const wrapper = mount(<Hangman />);
   expect(wrapper.state().guessed.has('a')).toEqual(false);
 
@@ -61,10 +63,15 @@ it('test single button works', function() {
 });
 
 // test that game ends when nWrong > maxWrong
-// it('test game ends when maxWrong is exceeded', function() {
-//   const wrapper = shallow(<Hangman />);
-//   wrapper.setState({ nWrong: 7 });
-//   // shouldn't be able to guess more...
+it('test that all buttons disable at end of game', function() {
+  const wrapper = shallow(<Hangman />);
+  wrapper.setState({ nWrong: 7 });
+  console.log(wrapper.state());
+  // all buttons should be disabled
+  const buttons = wrapper.find('.keyboard');
+  buttons.forEach(b => {
+    expect(b.props().disabled).toBe(true);
+  });
+});
 
-//   expect(wrapper.state().guessed.has('a')).toEqual(true);
-// });
+// ADD TEST that RESTART BUTTON WORKS
